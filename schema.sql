@@ -2,9 +2,11 @@
 
 CREATE TABLE animals(
     id INT PRIMARY KEY NOT NULL GENERATED ALWAYS AS IDENTITY,
-    name            VARCHAR(100) not null,
+    name            VARCHAR(100) NOT NULL,
     date_of_birth   DATE,
     escape_attempts INT,
     neutered        BOOLEAN,
     weight_kg       DECIMAL
 );
+
+ALTER TABLE animals ADD COLUMN species TEXT;
